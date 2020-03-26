@@ -1,0 +1,4 @@
+- Instalar a nodeJS
+- Criar o projeto
+- Adicionando as dependências
+- Subindo o servidor
