@@ -1,0 +1,51 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acessando elementos da página com JS</title>
+</head>
+
+<body>
+  <h1>Título</h1>
+  <div id="caixa">CAIXA</div>
+  <p class="texto">Parágrafo 1</p>
+  <p class="texto">Parágrafo 2</p>
+  <p class="texto">Parágrafo 3</p>
+  <p class="texto">Parágrafo 4</p>
+  <p class="texto">Parágrafo 5</p>
+  <p class="texto">Parágrafo 6</p>
+  <p class="texto">Parágrafo 7</p>
+
+  <div id="retangulo">
+    <a href="#">Link qualquer</a>
+  </div>
+
+  <script>
+    // o que vai dentro dos () é sintaxe de seletores CSS
+    // sempre irá retornar um VETOR
+    document.querySelectorAll('h1')[0].style.color = 'red';
+
+    // acessando o elemento pelo ID
+    document.querySelectorAll('#caixa')[0].style.border = '2px solid orange';
+
+    // acessado o elemento por CLASSES
+    var textos = document.querySelectorAll('.texto');
+
+    // vai automatizar nosso algoritmo para percorrer TODOS os elementos encontrados!
+    for (var i = 0; i < textos.length; i++) {
+      textos[i].style.fontFamily = 'Trebuchet MS';
+      textos[i].style.color = '#0066CC';
+    }
+
+    // acessando um elemento por hierarquia usando seletores
+    document.querySelectorAll('#retangulo a')[0].style.textDecoration = 'none';
+    document.querySelectorAll('#retangulo a')[0].style.color = '#FF99FF';
+
+
+
+  </script>
+
+</body>
+
+</html>
